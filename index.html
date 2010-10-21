@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>My First Pastebin(tm)</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+    <script src="/static/main.js"></script>
+    <link id="bespin_base" href="/static/bespin" />
+    <script src="/static/bespin/BespinEmbedded.js"></script>
+  </head>
+  <body>
+    <h1>My First Pastebin(tm)</h1>
+    <form method="post">
+      <fieldset>
+        <legend>Content</legend>
+        <textarea name="content" class="bespin"></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Options</legend>
+        <select id="lang" name="type">
+          {% for lang in langs %}
+          <option value="{{ lang.id }}">{{ lang.name }}</option>
+          {% endfor %}
+        </select>
+      </fieldset>
+      <input type="submit" />
+    </form>
+  </body>
+</html>
