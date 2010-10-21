@@ -2,3 +2,12 @@ textarea {
   width: 100%;
   min-height: 300px;
 }
+.error {
+  width: 400px;
+  background: #FFFF88;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+}
