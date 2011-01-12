@@ -1,4 +1,5 @@
 $(function(){
+  if ($.browser.webkit) return $('#lang').change(function () { $('.bespin')[0].bespin.editor.syntax = lang; }); // need to fix this
   var re = /([^+]+)\+?(.*)/;
   var di = {};
   var li = $('#lang')[0].options;
@@ -26,8 +27,5 @@ $(function(){
       }
     }
     $('.bespin')[0].bespin.editor.syntax = lang;
-  });
-  $('form').submit(function(){
-    $('textare').value($('.bespin')[0].bespin.editor.value);
   });
 });

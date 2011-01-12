@@ -18,6 +18,8 @@
       <fieldset>
         <legend>Options</legend>
         <select id="lang" name="type">
+          <option value="text" selected="selected">Text only</option>
+          <option disabled="disabled">-----</option>
           {% for lang in langs %}
           <option value="{{ lang.id }}">{{ lang.name }}</option>
           {% endfor %}
